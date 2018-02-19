@@ -1,0 +1,28 @@
+
+{
+  "manifest_version": 2,
+
+  "short_name": "My Extension",
+  "name": "My Chrome Extension",
+  "description": "This extension aggregates crypto currency pricing, news, and productivity tools such as a todo list and personal calendar.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Click here!"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["/static/css/main.css"],
+      "js": ["/static/js/main.js"]
+    }
+  ],
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
