@@ -13,7 +13,8 @@ class Ethereum extends Component {
       volume24H: null,
       lastUpdated: null,
       timeFrames: ['1h', '24h', '7d'],
-      active: '24h'
+      active: '24h',
+      tickColor: null
     };
   }
 
@@ -23,13 +24,15 @@ class Ethereum extends Component {
   componentDidMount() {
     this.fetchData().then(response => {
       let info = response;
+      let color = info.percent_change_24h > 0 ? 'green' : 'red';
       this.setState({
         priceUSD: info.price_usd,
         priceBTC: info.price_btc,
         marketCapUSD: info.market_cap_usd,
         percentChange: info.percent_change_24h,
         volume24H: info['24h_volume_usd'],
-        lastUpdated: info.last_updated
+        lastUpdated: info.last_updated,
+        tickColor: color
       });
     });
   }
@@ -59,12 +62,14 @@ class Ethereum extends Component {
     }
 
     this.fetchData().then(response => {
+      let color = response[value] > 0 ? 'green' : 'red';
       this.setState({
         percentChange: response[value],
         priceUSD: response.price_usd,
         marketCapUSD: response.market_cap_usd,
         lastUpdated: response.last_updated,
-        active: timeFrame
+        active: timeFrame,
+        tickColor: color
       });
     });
   }
@@ -85,14 +90,14 @@ class Ethereum extends Component {
     return (
       <div className="data-points">
         <div className="data-point percent-change">
-          <p>{this.state.percentChange}%</p>
+          <p style={{color: this.state.tickColor}}>{this.state.percentChange}%</p>
           <p className="timeFrames">{timeFrames}</p>
         </div>
         <div className="data-point price">
           <p>${(Math.round(this.state.priceUSD * 100) / 100).toFixed(2)}</p>
         </div>
         <div className="data-point market-cap">
-          <p>{(Math.round(this.state.marketCapUSD * 100) / Math.pow(10, 11)).toFixed(2)}B</p>
+          <p>${(Math.round(this.state.marketCapUSD * 100) / Math.pow(10, 11)).toFixed(2)}B</p>
           <p className="data-label">Market Cap</p>
         </div>
       </div>
