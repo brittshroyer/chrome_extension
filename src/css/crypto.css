@@ -1,6 +1,6 @@
 .data-points{
   display: flex;
-
+  margin-top: 20px;
   justify-content: space-around;
   align-items: center;
 }

@@ -1,7 +1,9 @@
 .main{
   height: 100vh;
   width: 100vw;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 body {
@@ -14,4 +16,12 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 60px;
   background-size: 15%;
+}
+
+.bottom-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: blue; */
+  height: 500px;
 }
