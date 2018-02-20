@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Ethereum from './Ethereum';
+import Ethereum from './components/Ethereum';
 
 class App extends Component {
   render() {

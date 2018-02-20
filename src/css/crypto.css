@@ -1,0 +1,41 @@
+.data-points{
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.data-point{
+  height: 100px;
+  width: 150px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+}
+
+.data-point p {
+  margin: 5px;
+}
+.data-label {
+  font-size: 14px;
+  color: #9ca3bc;
+}
+
+.price{
+  font-size: 55px;
+}
+
+.timeFrames{
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+
+.timeFrame-item{
+  cursor: pointer;
+}
