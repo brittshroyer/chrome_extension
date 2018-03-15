@@ -3,25 +3,21 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  background-image: url('./assets/ep_naturalblack.png');
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
-  background: #212940;
   color: #fffefe;
-  background-image: url('./assets/ethereum_logo.png');
   background-repeat: no-repeat;
-  background-position: 50% 60px;
+  background-position: 50% 100px;
   background-size: 15%;
 }
 
-.bottom-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background: blue; */
-  height: 500px;
+h2 {
+  margin-bottom: -15px;
+  color: #9ca3bc;
 }

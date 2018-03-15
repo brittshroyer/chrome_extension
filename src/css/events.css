@@ -1,0 +1,49 @@
+.events-container{
+  /* background: blue; */
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.events-list{
+  /* background: green; */
+  height: 300px;
+  width: 100vw;
+  bottom: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.events-list a {
+  cursor: pointer;
+  color: #9ca3bc;
+}
+
+.event{
+  height: 100px;
+  width: 100px;
+  background: black;
+  text-align: center;
+}
+
+.event a {
+
+}
+
+/* .slide-forward {
+  -webkit-animation-name: slideForward;
+  -webkit-animation-duration: 1.5s;
+  animation-name: slideForward;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes slideForward {
+  0% { left: 0vw;}
+  100%{ left: 100vw;}
+} */

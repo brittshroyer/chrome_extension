@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import Ethereum from './components/Ethereum';
-import Todo from './components/Todo';
+// import Todo from './components/Todo';
+import Events from './components/Events';
+import Video from './components/Video';
 
 class App extends Component {
   render() {
     return (
       <div className="main">
         <Ethereum />
-        <div className="bottom-container">
-          <div>Events Here</div>
-          <Todo />
-        </div>
+        <Events />
       </div>
     );
   }

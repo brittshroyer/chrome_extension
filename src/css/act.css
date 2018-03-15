@@ -1,0 +1,42 @@
+.act-container {
+  height: 80%;
+  width: 300px;
+  /* border: 2px solid black; */
+  text-align: center;
+  overflow-x: scroll;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 12px;
+  box-shadow: 3px 3px 2px 0 #090909;
+  position: relative;
+  color: #fffefe;
+}
+
+.act-data {
+  background: black;
+  position: relative;
+  border-radius: 6px;
+
+  /* width: auto; */
+}
+
+.act-title {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+
+}
+
+.act-date {
+  width: 85px;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  border-radius: 0 5px 5px 0;
+}
